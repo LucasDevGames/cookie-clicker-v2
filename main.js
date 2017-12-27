@@ -1662,9 +1662,10 @@ Game.Launch=function()
 			
 			if (list.length==0)
 			{
-				if (Game.cookiesEarned<5) list.push('You feel like making cookies. But nobody wants to eat your cookies.');
+				if (Game.cookiesEarned<5) list.push('Welcome to Cookie Clicker V.2 created by LucasGamer213. You feel like making cookies, but no one wants to eat them.');
 				else if (Game.cookiesEarned<50) list.push('Your first batch goes to the trash. The neighborhood raccoon barely touches it.');
 				else if (Game.cookiesEarned<100) list.push('Your family accepts to try some of your cookies.');
+				else if (Game.cookiesEarned<213) list.push('This game was created by LucasGamer213');
 				else if (Game.cookiesEarned<500) list.push('Your cookies are popular in the neighborhood.');
 				else if (Game.cookiesEarned<1000) list.push('People are starting to talk about your cookies.');
 				else if (Game.cookiesEarned<3000) list.push('Your cookies are talked about for miles around.');
