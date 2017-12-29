@@ -166,7 +166,7 @@ Game.Launch=function()
 		Game.T=0;
 		Game.fps=30;
 		
-		Game.version=2.032;
+		Game.version=2.234;
 		Game.beta=0;
 		l('versionNumber').innerHTML='v.'+Game.version+(Game.beta?' <span style="color:#ff0;">beta</span>':'');
 		//l('links').innerHTML=(Game.beta?'<a href="../" target="blank">Live version</a> | ':'<a href="beta" target="blank">Try the beta!</a> | ')+'<a href="http://orteil.dashnet.org/experiments/cookie/" target="blank">Cookie Clicker Classic</a>';
