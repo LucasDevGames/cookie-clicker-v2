@@ -166,10 +166,11 @@ Game.Launch=function()
 		Game.T=0;
 		Game.fps=30;
 		
-		Game.version=2.234;
+		Game.version=2.032;
 		Game.beta=0;
 		l('versionNumber').innerHTML='v.'+Game.version+(Game.beta?' <span style="color:#ff0;">beta</span>':'');
 		//l('links').innerHTML=(Game.beta?'<a href="../" target="blank">Live version</a> | ':'<a href="beta" target="blank">Try the beta!</a> | ')+'<a href="http://orteil.dashnet.org/experiments/cookie/" target="blank">Cookie Clicker Classic</a>';
+		l('links').innerHTML='<a href="http://orteil.dashnet.org/experiments/cookie/" target="blank">Cookie Clicker Classic</a>';
 		
 		//latency compensator stuff
 		Game.time=new Date().getTime();
@@ -1247,10 +1248,27 @@ Game.Launch=function()
 			}
 			if (Game.onMenu=='log')
 			{
-				str+='<div class="section">Our Site</div>'+
+				str+='<div class="section">About Us</div>'+
 				'<div class="subsection">'+
-				'<div class="title" style="text-align:center;">Cookie Clicker V.2 is hosted by</div>'+
-				'<div class="listing" style="font-size: 32px; text-align:center;">GamingHub <a href="http://gaminghub.me" target="_blank">(www.gaminghub.me)</a></div>'				
+				'<div class="title"></div>'+
+				'<div class="listing">We have made this website because we noticed that people weren\'t playing Cookie Clicker anymore. So we made this!</div>'+
+				
+				'</div><div class="subsection update small">'+
+				'<div class="title">Cookie Clicker V2 is Hosted by GamingHub</div>'+
+				'<div class="listing">GamingHub is an awesome company of games! You can play lots of games there!</div>'+
+				
+				'</div><div class="subsection update small">'+
+				'<div class="title">Original Cookie Clicker</div>'+
+				'<div class="listing">The original Cookie Clicker is not this. This is just a better version of it.</div>'+
+				'<div class="listing">If you would like to play the orignal cookie clicker you may!</div>'+
+				'<div class="listing">http://orteil.dashnet.org/cookieclicker/</div>'+
+				
+				'</div><div class="subsection update">'+
+				'<div class="title">Did we copyright this?</div>'+
+				'<div class="listing">Not exactly, we added a heak more lot of stuff to this version.</div>'+
+				'<div class="listing">As it was said this is not the orignal cookie clicker.</div>'+
+				'<div class="listing">We hope you like this version more than the orignal one!/div>'+
+				'</div>'
 				;
 			}
 			else if (Game.onMenu=='stats')
@@ -1662,10 +1680,9 @@ Game.Launch=function()
 			
 			if (list.length==0)
 			{
-				if (Game.cookiesEarned<5) list.push('Welcome to Cookie Clicker V.2 created by LucasGamer213. You feel like making cookies, but no one wants to eat them.');
+				if (Game.cookiesEarned<5) list.push('You feel like making cookies. But nobody wants to eat your cookies.');
 				else if (Game.cookiesEarned<50) list.push('Your first batch goes to the trash. The neighborhood raccoon barely touches it.');
 				else if (Game.cookiesEarned<100) list.push('Your family accepts to try some of your cookies.');
-				else if (Game.cookiesEarned<213) list.push('This game was created by LucasGamer213');
 				else if (Game.cookiesEarned<500) list.push('Your cookies are popular in the neighborhood.');
 				else if (Game.cookiesEarned<1000) list.push('People are starting to talk about your cookies.');
 				else if (Game.cookiesEarned<3000) list.push('Your cookies are talked about for miles around.');
@@ -2096,6 +2113,7 @@ Game.Launch=function()
 			if (this.amount>=1) Game.Win('Antibatter');if (this.amount>=50) Game.Win('Quirky quarks');if (this.amount>=100) Game.Win('It does matter!');
 		});
 		Game.Objects['Antimatter condenser'].displayName='<span style="font-size:65%;">Antimatter condenser</span>';//shrink the name since it's so large
+		
 		/*=====================================================================================
 		UPGRADES
 		=======================================================================================*/
